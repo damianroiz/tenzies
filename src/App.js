@@ -1,7 +1,7 @@
 import React from "react"
 import Die from "./Die.js"
 
-
+const hello = 1 
 export default function App() {
   const [dice, setDice] = React.useState(allNewDice())
 
