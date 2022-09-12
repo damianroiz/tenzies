@@ -21,21 +21,12 @@ main {
     align-items: center;
 }
 
-<<<<<<< HEAD
 .title {
     font-size: 40px;
     margin: 0;
 }
 
 .instructions {
-=======
-main > h1 {
- font-size: 40px; 
- margin: 0;   
-}
-
-main > p {
->>>>>>> da5375e5687b386d862073dfc9e2b2b3371f3539
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     margin-top: 0;
@@ -43,10 +34,7 @@ main > p {
 }
 
 .dice-container {
-<<<<<<< HEAD
     width: 100%;
-=======
->>>>>>> da5375e5687b386d862073dfc9e2b2b3371f3539
     display: grid;
     grid-template: auto auto / repeat(5, 1fr);
     grid-gap: 20px;
