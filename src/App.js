@@ -15,7 +15,6 @@ export default function App() {
     const allSavemValue = dice.every(die => die.value === firstValue)
     if (allHeld && allSavemValue) {
       setTenzies(true)
-      console.log("You Won!")
     }
   }, [dice])
 
@@ -36,11 +35,16 @@ export default function App() {
   }
 
   function rollDice() {
-    setDice(oldDice => oldDice.map(die => {
-      return die.isHeld ?
-      die:
-      generateNewDie()
-    }))
+    if (!tenzies) {
+      setDice(oldDice => oldDice.map(die => {
+        return die.isHeld ?
+        die:
+        generateNewDie()
+      }))
+    } else {
+      setTenzies(false)
+      setDice(allNewDice())
+    }  
   }
 
   function holdDice(id) {
@@ -50,8 +54,6 @@ export default function App() {
       generateNewDie()
     }))
   }
-
-
 
   const diceElements = dice.map(die => (
     <Die
